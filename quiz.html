@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="title" content="Barça Quiz - Força Barça Hub">
+  <meta name="description" content="Test your FC Barcelona knowledge with this fan quiz.">
+  <meta name="keywords" content="Barça quiz, FC Barcelona trivia, Messi quiz, Barcelona fans">
+  <meta name="author" content="Travis Edward D'Castro">
+  <link rel="icon" href="images/barca-badge.png" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Barça Quiz - Força Barça Hub</title>
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">
+      <img src="images/barca-badge.png" alt="Barça Badge" />
+      <h1>Força Barça Hub</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">Barça Info</a></li>
+        <li><a href="quiz.html" class="active">Quiz</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><button id="modeToggle">🌓</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="content" id="quiz-container">
+    <h2 id="question">Loading question...</h2>
+    <div id="options"></div>
+    <button id="next-btn">Next</button>
+    <p id="score"></p>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Força Barça Hub | Created by Travis Edward D'Castro</p>
+  </footer>
+
+  <script src="quiz.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

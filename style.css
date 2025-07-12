@@ -1,0 +1,249 @@
+/* RESET & BASE */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: background 0.3s, color 0.3s;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: #fff;
+  color: #111;
+  line-height: 1.6;
+}
+
+body.dark-mode {
+  background: #121212;
+  color: #f0f0f0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+ul {
+  list-style: none;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #004d98;
+  color: white;
+  padding: 15px 40px;
+  flex-wrap: wrap;
+}
+
+.navbar.dark-mode {
+  background: #1e1e1e;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  width: 45px;
+}
+
+.navbar nav ul {
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.navbar nav a {
+  color: white;
+  font-weight: bold;
+}
+
+.navbar nav a.active {
+  text-decoration: underline;
+}
+
+#modeToggle {
+  background: none;
+  color: white;
+  border: none;
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+
+/* HERO SECTION */
+.hero {
+  text-align: center;
+  padding: 100px 30px;
+  background: #a50044;
+  color: white;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+}
+
+.hero .buttons a {
+  display: inline-block;
+  margin: 15px 10px 0;
+  padding: 12px 30px;
+  background: #ffc107;
+  color: #000;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+/* MAIN CONTENT */
+main.content {
+  padding: 50px 30px;
+  max-width: 900px;
+  margin: auto;
+}
+
+main.content h2 {
+  margin-bottom: 30px;
+  text-align: center;
+  font-size: 2.4rem;
+  color: #004d98;
+}
+
+main.content p {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* GLOSSARY LIST */
+.glossary li {
+  margin-bottom: 12px;
+  padding: 12px;
+  border-left: 4px solid #a50044;
+  background: #f9f9f9;
+}
+
+body.dark-mode .glossary li {
+  background: #2a2a2a;
+  border-color: #ffc107;
+}
+
+/* QUIZ */
+#quiz-container {
+  max-width: 750px;
+  margin: auto;
+  text-align: center;
+}
+
+#question {
+  font-size: 1.6rem;
+  margin-bottom: 25px;
+}
+
+#options button {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+  padding: 12px;
+  background: #004d98;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+#options button:hover {
+  background: #00306e;
+}
+
+#next-btn {
+  margin-top: 25px;
+  padding: 12px 30px;
+  background: #ffc107;
+  color: #000;
+  border: none;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+#score {
+  margin-top: 20px;
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+/* CONTACT FORM */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  max-width: 600px;
+  margin: auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.contact-form button {
+  padding: 14px;
+  background: #004d98;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background: #00306e;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #eee;
+  margin-top: 50px;
+}
+
+body.dark-mode footer {
+  background: #1e1e1e;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .navbar nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero {
+    padding: 60px 20px;
+  }
+
+  main.content {
+    padding: 40px 20px;
+  }
+}
