@@ -1,25 +1,18 @@
-// quiz.js
-
-const questions = [
+const quizData = [
   {
-    question: "Who is FC Barcelona’s all-time top scorer?",
-    options: ["Lionel Messi", "Luis Suárez", "Ronaldinho", "César Rodríguez"],
+    question: "Who is FC Barcelona's all-time top scorer?",
+    options: ["Ronaldinho", "Lionel Messi", "Xavi", "Luis Suárez"],
     answer: "Lionel Messi"
   },
   {
-    question: "What year was FC Barcelona founded?",
-    options: ["1899", "1902", "1910", "1923"],
-    answer: "1899"
-  },
-  {
-    question: "Which stadium is home to FC Barcelona?",
-    options: ["Santiago Bernabéu", "Camp Nou", "Wanda Metropolitano", "Mestalla"],
+    question: "What is the name of Barcelona’s stadium?",
+    options: ["Bernabéu", "Etihad", "Camp Nou", "Anfield"],
     answer: "Camp Nou"
   },
   {
-    question: "Who wore the #6 shirt before becoming Barcelona’s head coach?",
-    options: ["Iniesta", "Xavi", "Busquets", "Puyol"],
-    answer: "Xavi"
+    question: "What year was FC Barcelona founded?",
+    options: ["1899", "1905", "1910", "1923"],
+    answer: "1899"
   }
 ];
 
@@ -29,42 +22,57 @@ let score = 0;
 const questionEl = document.getElementById("question");
 const optionsEl = document.getElementById("options");
 const nextBtn = document.getElementById("next-btn");
-const scoreEl = document.getElementById("score");
+const resultEl = document.getElementById("result");
 
 function loadQuestion() {
-  const q = questions[currentQuestion];
-  questionEl.textContent = q.question;
+  const current = quizData[currentQuestion];
+  questionEl.textContent = current.question;
   optionsEl.innerHTML = "";
 
-  q.options.forEach(option => {
+  current.options.forEach(option => {
     const btn = document.createElement("button");
     btn.textContent = option;
-    btn.onclick = () => selectAnswer(option, q.answer);
+    btn.classList.add("quiz-option");
+    btn.addEventListener("click", () => checkAnswer(option));
     optionsEl.appendChild(btn);
   });
 }
 
-function selectAnswer(selected, correct) {
-  const buttons = optionsEl.querySelectorAll("button");
-  buttons.forEach(btn => {
+function checkAnswer(selected) {
+  const correct = quizData[currentQuestion].answer;
+  const allOptions = document.querySelectorAll(".quiz-option");
+
+  allOptions.forEach(btn => {
     btn.disabled = true;
-    if (btn.textContent === correct) btn.style.background = "green";
-    else if (btn.textContent === selected) btn.style.background = "red";
+    if (btn.textContent === correct) {
+      btn.style.backgroundColor = "green";
+    } else if (btn.textContent === selected) {
+      btn.style.backgroundColor = "red";
+    }
   });
 
-  if (selected === correct) score++;
-  scoreEl.textContent = `Score: ${score}/${questions.length}`;
+  if (selected === correct) {
+    score++;
+  }
+
+  nextBtn.style.display = "block";
 }
 
 nextBtn.addEventListener("click", () => {
   currentQuestion++;
-  if (currentQuestion < questions.length) {
+  if (currentQuestion < quizData.length) {
     loadQuestion();
-  } else {
-    questionEl.textContent = "Quiz Completed!";
-    optionsEl.innerHTML = "";
     nextBtn.style.display = "none";
+  } else {
+    showResult();
   }
 });
 
-window.onload = loadQuestion;
+function showResult() {
+  document.getElementById("quiz-container").style.display = "none";
+  resultEl.style.display = "block";
+  resultEl.innerHTML = `<h3>Quiz Complete!</h3><p>Your Score: ${score} / ${quizData.length}</p>`;
+}
+
+// Start quiz
+loadQuestion();

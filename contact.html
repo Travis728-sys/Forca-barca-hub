@@ -3,47 +3,56 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="title" content="Contact - Força Barça Hub">
-  <meta name="description" content="Get in touch with the creator of Força Barça Hub.">
-  <meta name="keywords" content="Contact Barça, Força Barça Hub Contact, FC Barcelona Fan Website, Travis Edward D'Castro">
+  <meta name="description" content="Contact the Força Barça Hub team – Send us your queries, feedback or suggestions." />
+  <meta name="keywords" content="Contact FC Barcelona site, Contact Força Barça Hub" />
   <meta name="author" content="Travis Edward D'Castro" />
-  <link rel="icon" href="images/barca-badge.png" />
+  <title>Contact – Força Barça Hub</title>
   <link rel="stylesheet" href="style.css" />
-  <title>Contact - Força Barça Hub</title>
 </head>
 <body>
-  <header class="navbar">
-    <div class="logo">
-      <img src="images/barca-badge.png" alt="Barça Badge" />
-      <h1>Força Barça Hub</h1>
-    </div>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">Barça Info</a></li>
-        <li><a href="quiz.html">Quiz</a></li>
-        <li><a href="contact.html" class="active">Contact</a></li>
-        <li><button id="modeToggle">🌓</button></li>
-      </ul>
-    </nav>
-  </header>
+<header class="navbar">
+  <div class="logo">
+    <img src="images/barca-badge.png" alt="Barça Logo" class="navbar-logo" />
+    <h1>Força Barça Hub</h1>
+  </div>
+  <nav>
+    <ul>
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="about.html">Barça Info</a></li>
+      <li><a href="quiz.html">Quiz</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><button id="modeToggle">🌓</button></li>
+    </ul>
+  </nav>
+</header>
 
-  <main class="content">
-    <h2>Contact the Creator</h2>
-    <p>If you have any questions, feedback, or want to connect, use the form below!</p>
-    
-    <form action="https://formsubmit.co/travisdcastro50@gmail.com" method="POST" class="contact-form">
-      <input type="text" name="name" placeholder="Your Name" required />
-      <input type="email" name="email" placeholder="Your Email" required />
-      <textarea name="message" placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-  </main>
+
+  <section class="contact-section">
+    <h2>Contact Us</h2>
+    <p>Have a question, suggestion, or just want to say Visca el Barça? Drop us a message!</p>
+
+<form action="https://formspree.io/f/myzpgwlz" method="POST">
+  <label for="name">Your Name</label>
+  <input type="text" id="name" name="name" required>
+
+  <label for="email">Your Email</label>
+  <input type="email" id="email" name="_replyto" required>
+
+  <label for="message">Your Message</label>
+  <textarea id="message" name="message" rows="5" required></textarea>
+
+  <button type="submit">Send Message</button>
+</form>
+
+  </section>
 
   <footer>
     <p>&copy; 2025 Força Barça Hub | Created by Travis Edward D'Castro</p>
   </footer>
 
   <script src="script.js"></script>
+  <div class="footer-logo">
+  <img src="images/barca-badge.png" alt="Barça Logo" />
+</div>
 </body>
 </html>
