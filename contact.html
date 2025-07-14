@@ -1,58 +1,59 @@
+<!-- contact.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Contact the Força Barça Hub team – Send us your queries, feedback or suggestions." />
-  <meta name="keywords" content="Contact FC Barcelona site, Contact Força Barça Hub" />
-  <meta name="author" content="Travis Edward D'Castro" />
-  <title>Contact – Força Barça Hub</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact - Força Barça Hub</title>
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-<header class="navbar">
-  <div class="logo">
-    <img src="images/barca-badge.png" alt="Barça Logo" class="navbar-logo" />
-    <h1>Força Barça Hub</h1>
+  <div id="preloader">
+  <div class="preloader-content">
+    <img src="images/barca-badge.png" alt="Loading..." />
+    <p>Visca el Barça!</p>
   </div>
-  <nav>
-    <ul>
-      <li><a href="index.html" class="active">Home</a></li>
-      <li><a href="about.html">Barça Info</a></li>
-      <li><a href="quiz.html">Quiz</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><button id="modeToggle">🌓</button></li>
-    </ul>
-  </nav>
-</header>
+</div>
 
+  <header class="navbar">
+    <div class="logo">
+      <img src="images/barca-badge.png" alt="Barça Logo" class="rotating-navbar-logo" />
+      <h1>Força Barça Hub</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">Barça Info</a></li>
+        <li><a href="quiz.html">Quiz</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+         <li><a href="articles.html">Articles</a></li>
+        <li><button id="modeToggle">🌓</button></li>
+      </ul>
+    </nav>
+  </header>
 
-  <section class="contact-section">
-    <h2>Contact Us</h2>
-    <p>Have a question, suggestion, or just want to say Visca el Barça? Drop us a message!</p>
+<main class="contact-section">
+  <h2>Contact Us</h2>
+  <form class="contact-form" action="https://formspree.io/f/YOUR-FORM-ID" method="POST">
+    <label for="name">Name</label>
+    <input type="text" name="name" id="name" required />
 
-<form action="https://formspree.io/f/myzpgwlz" method="POST">
-  <label for="name">Your Name</label>
-  <input type="text" id="name" name="name" required>
+    <label for="email">Email</label>
+    <input type="email" name="email" id="email" required />
 
-  <label for="email">Your Email</label>
-  <input type="email" id="email" name="_replyto" required>
+    <label for="message">Message</label>
+    <textarea name="message" id="message" rows="5" required></textarea>
 
-  <label for="message">Your Message</label>
-  <textarea id="message" name="message" rows="5" required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+</main>
 
-  <button type="submit">Send Message</button>
-</form>
-
-  </section>
 
   <footer>
     <p>&copy; 2025 Força Barça Hub | Created by Travis Edward D'Castro</p>
+    <img src="images/barca-badge.png" alt="Barça Logo" class="footer-logo bounce" />
   </footer>
 
   <script src="script.js"></script>
-  <div class="footer-logo">
-  <img src="images/barca-badge.png" alt="Barça Logo" />
-</div>
 </body>
 </html>

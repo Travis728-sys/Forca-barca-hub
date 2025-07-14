@@ -3,45 +3,48 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Quiz - Força Barça Hub</title>
+  <title>FCB Quiz | Força Barça Hub</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-<header class="navbar">
-  <div class="logo">
-    <img src="images/barca-badge.png" alt="Barça Logo" class="navbar-logo" />
-    <h1>Força Barça Hub</h1>
+  <div id="preloader">
+  <div class="preloader-content">
+    <img src="images/barca-badge.png" alt="Loading..." />
+    <p>Visca el Barça!</p>
   </div>
-  <nav>
-    <ul>
-      <li><a href="index.html" class="active">Home</a></li>
-      <li><a href="about.html">Barça Info</a></li>
-      <li><a href="quiz.html">Quiz</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><button id="modeToggle">🌓</button></li>
-    </ul>
-  </nav>
-</header>
+</div>
 
+  <header class="navbar">
+    <div class="logo">
+      <img src="images/barca-badge.png" alt="Barça Logo"  class="rotating-navbar-logo"/>
+      <h1>Força Barça Hub</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">Barça Info</a></li>
+        <li><a href="quiz.html" class="active">Quiz</a></li>
+        <li><a href="contact.html">Contact</a></li>
+         <li><a href="articles.html">Articles</a></li>
+        <li><button id="modeToggle">🌓</button></li>
+      </ul>
+    </nav>
+  </header>
 
-  <section class="quiz-section">
+  <main class="quiz-section">
     <h2>Barça Quiz</h2>
-    <div id="quiz-container">
+    <div class="quiz-box">
       <div id="question">Loading question...</div>
       <div id="options"></div>
-      <button id="next-btn">Next</button>
+      <button id="nextBtn">Next</button>
     </div>
-    <div id="result" style="display: none;"></div>
-  </section>
+  </main>
 
   <footer>
     <p>&copy; 2025 Força Barça Hub | Created by Travis Edward D'Castro</p>
   </footer>
-  <div class="footer-logo">
-    <img src="images/barca-badge.png" alt="Barça Logo" />
-  </div>
 
-  <script src="script.js"></script>
   <script src="quiz.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
